@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+    <div class="game-container">
+
+        <div class="progress-wrapper">
+            <div class="progress" role="progressbar" aria-label="Animated" aria-valuenow="0" aria-valuemin="0"
+                aria-valuemax="100" style="height: 20px;">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 0%">0%</div>
+            </div>
+        </div>
+
+
+        <div class="card-grid">
+
+            <!-- <div class="memory-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="back.jpg" alt="">
+                    </div>
+                    <div class="card-back">
+                        <img src="images/0.jpg" alt="" id="0">
+                    </div>
+                </div>
+            </div> -->
+
+
+
+        </div>
+
+    </div>
+
+
+    <div class="modal fade" id="gameOverModal"  tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="gameOverLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="gameOverLabel">Game Over</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Congratulations! You finished the game.</p>
+                    <button type="button" class="btn btn-primary" id="playAgainBtn">Play Again</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <audio id="fulltrack" src="audio/fulltrack.mp3" loop></audio>
+    <audio id="flipSound" src="audio/flip.mp3"></audio>
+    <audio id="goodSound" src="audio/good.mp3"></audio>
+    <audio id="failSound" src="audio/fail.mp3"></audio>
+    <audio id="gameOverSound" src="audio/game-over.mp3"></audio>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script type="module" src="dist/main.js"></script>
+
+</body>
+
+</html>
